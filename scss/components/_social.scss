@@ -1,0 +1,48 @@
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    background-color: var(--main-background-color);
+
+    border-radius: 50%;
+
+    transition: background-color var(--animation), color var(--animation);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+
+}
+
+.social-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-icon {
+    fill: #AFB1B8;
+    transition: fill var(--animation);
+
+    .social-link:hover &,
+    .social-link:focus & {
+        fill: #FFF;
+     }
+}
+
+.footer-social-link {
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+.footer-social-icon {
+    fill: #FFF;
+}
