@@ -1,13 +1,26 @@
 .header {
     border-bottom: 1px solid #EEE;
+
+    @include mq(mobile-only) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
 }
 
 .header__container {
     display: flex;
     align-items: center;
+
+    position: relative;
 }
 
 .header-navigations__links {
+    @include mq(mobile-only) {
+       display: none;
+    }
+    
     display: flex;
 }
 
@@ -58,6 +71,15 @@
 }
 
 .header-contacts {
+    @include mq(mobile-only) {
+        display: none;
+    }
+
+    @include mq(tablet-only) {
+        display: block;
+        margin-left: auto;
+    }
+
     display: flex;
     margin-left: auto;
 
@@ -82,6 +104,14 @@
     &:focus {
         color: var(--accent-color);
     }
+
+    @include mq(tablet-only) {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-size: 12px;
+        line-height: normal;
+        letter-spacing: 0.24px;
+    }
 }
 
 .header-contacts__icon {
@@ -95,4 +125,23 @@
     &:last-child {
         margin-right: 0px;
     }
+
+    @include mq(tablet-only) {
+        margin-right: 0;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0px;;
+        }
+    }
+}
+
+.icon-envelope {
+    width: 14px;
+    height: 10px;
+}
+
+.icon-smartphone {
+    width: 10px;
+    height: 14px;
 }

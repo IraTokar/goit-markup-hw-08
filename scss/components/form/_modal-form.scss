@@ -3,7 +3,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    width: 528px;
+    width: 450px;
 
     padding: 40px;
     border-radius: 4px;
@@ -15,6 +15,11 @@
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(0.8);
     }
+
+    @include mq(desktop) {
+        width: 528px;
+    }
+
 }
 
 
@@ -197,20 +202,30 @@
 
 .policy-description {
     color: var(--description-text-color);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.71;
-    letter-spacing: 0.42px;
+    letter-spacing: 0.36px;
+
+    @include mq(desktop) {
+        font-size: 14px;
+        letter-spacing: 0.42px;
+    }
 }
 
 .policy-link {
     color: var(--accent-color);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: 0.42px;
+    letter-spacing: 0.36px;
 
     transition: border-bottom var(--animation);
+
+    @include mq(desktop) {
+        font-size: 14px;
+        letter-spacing: 0.42px;
+    }
 }
 
 .form-button {

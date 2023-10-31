@@ -1,6 +1,7 @@
 // utils
 @import './utils/vars';
 @import './utils/visually-hidden';
+@import './utils/mixins';
 
 
 // base styles
@@ -11,6 +12,7 @@
 
 // components
 @import './components/logo';
+@import './components/menu-header';
 @import './components/form/module';
 @import './components/filter-buttons';
 @import './components/social';
@@ -24,3 +26,5 @@
 @import './layouts/clients';
 @import './layouts/footer';
 @import './layouts/portfolio';
+
+

@@ -1,5 +1,11 @@
 .skils {
     padding-bottom: 94px;
+    display: none;
+
+    @include mq(desktop) {
+        display: flex;
+    }
+    
 }
 
 .skils__title {

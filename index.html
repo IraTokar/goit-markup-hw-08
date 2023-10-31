@@ -31,6 +31,7 @@
         <a class="link logo header__logo" href="./index.html"
           >Web<span class="logo--black">Studio</span></a
         >
+
         <nav class="header-navigations">
           <ul class="list header-navigations__links">
             <li class="header-navigations__item">
@@ -57,7 +58,11 @@
               class="link header-contacts__link"
               href="mailto:info@devstudio.com"
             >
-              <svg class="header-contacts__icon" width="16" height="12">
+              <svg
+                class="header-contacts__icon icon-envelope"
+                width="16"
+                height="12"
+              >
                 <use href="./images/sprite.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
@@ -65,13 +70,128 @@
           </li>
           <li class="header-contacts__item">
             <a class="link header-contacts__link" href="tel:+380961111111">
-              <svg class="header-contacts__icon" width="10" height="16">
+              <svg
+                class="header-contacts__icon icon-smartphone"
+                width="10"
+                height="16"
+              >
                 <use href="./images/sprite.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11
             </a>
           </li>
         </ul>
+
+        <!-- Header-menu -->
+        <button
+          class="menu-button js-open-menu"
+          type="button"
+          aria-label="Перемикач мобільного меню"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-icons" width="40" height="40">
+            <use
+              class="icon-menu"
+              href="./images/sprite-form.svg#icon-menu"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="menu-container js-menu-container" id="menu-navigation">
+          <button
+            class="menu-button js-close-menu"
+            type="button"
+            aria-label="Перемикач мобільного меню"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="menu-icons" width="40" height="40">
+              <use
+                class="icon-close"
+                href="./images/sprite-form.svg#icon-menu-close"
+              ></use>
+              <!-- <use
+                  class="icon-menu"
+                  href="./images/sprite-form.svg#icon-menu"
+                ></use> -->
+            </svg>
+          </button>
+
+          <nav class="menu-navigation">
+            <ul class="menu-nav-list list">
+              <li class="menu-nav-item">
+                <a href="./index.html" class="menu-nav-link active-link link"
+                  >Студія</a
+                >
+              </li>
+              <li class="menu-nav-item">
+                <a href="./portfolio.html" class="menu-nav-link link"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="menu-nav-item">
+                <a href="#" class="menu-nav-link link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="menu-contacts list">
+            <li class="menu-contacts-item">
+              <a
+                class="menu-contacts-tel link active-link"
+                href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="menu-contacts-item">
+              <a
+                class="menu-contacts-mail link"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="menu-socials list">
+            <li class="menu-social-item">
+              <a
+                class="menu-social-link link"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram</a
+              >
+            </li>
+            <li class="menu-social-item">
+              <a
+                class="menu-social-link link"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                >Twitter</a
+              >
+            </li>
+            <li class="menu-social-item">
+              <a
+                class="menu-social-link link"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                >Facebook</a
+              >
+            </li>
+            <li class="menu-social-item">
+              <a
+                class="menu-social-link link"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -224,6 +344,10 @@
           <ul class="list skils__list">
             <li class="skils__item">
               <img
+                srcset="
+                  ./images/skils/coding.jpg    1x,
+                  ./images/skils/coding@2x.jpg 2x
+                "
                 src="./images/skils/coding.jpg"
                 alt="Кодування"
                 width="370"
@@ -233,6 +357,10 @@
             </li>
             <li class="skils__item">
               <img
+                srcset="
+                  ./images/skils/testing.jpg    1x,
+                  ./images/skils/testing@2x.jpg 2x
+                "
                 src="./images/skils/testing.jpg"
                 alt="Тестування"
                 width="370"
@@ -242,6 +370,10 @@
             </li>
             <li class="skils__item">
               <img
+                srcset="
+                  ./images/skils/desining.jpg     1x,
+                  ./images/skils/designing@2x.jpg 2x
+                "
                 src="./images/skils/desining.jpg"
                 alt="Дизайн"
                 width="370"
@@ -261,10 +393,18 @@
           <ul class="list team-list">
             <li class="team-item">
               <img
-                src="./images/team/igor.jpg"
+                class="team-img"
+                srcset="
+                  ./images/team/igor-s.jpg    450w,
+                  ./images/team/igor-s@2x.jpg 800w,
+                  ./images/team/igor-m.jpg    354w,
+                  ./images/team/igor-m@2x.jpg 708w,
+                  ./images/team/igor-l.jpg    270w,
+                  ./images/team/igor-l@2x.jpg 540w
+                "
+                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (max-width:767px) 450px, 100vw"
+                src="./images/team/igor-s.jpg"
                 alt="Ігор Дем'яненко"
-                width="270"
-                height="260"
               />
               <div class="member-desc">
                 <h3 class="team-member">Ігор Дем'яненко</h3>
@@ -328,10 +468,18 @@
             </li>
             <li class="team-item">
               <img
-                src="./images/team/olga.jpg"
+                class="team-img"
+                srcset="
+                  ./images/team/olga-s.jpg    450w,
+                  ./images/team/olga-s@2x.jpg 800w,
+                  ./images/team/olga-m.jpg    354w,
+                  ./images/team/olga-m@2x.jpg 708w,
+                  ./images/team/olga-l.jpg    270w,
+                  ./images/team/olga-l@2x.jpg 540w
+                "
+                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (max-width:767px) 450px, 100vw"
+                src="./images/team/olga-s.jpg"
                 alt="Ольга Рєпіна"
-                width="270"
-                height="260"
               />
               <div class="member-desc">
                 <h3 class="team-member">Ольга Рєпіна</h3>
@@ -395,10 +543,18 @@
             </li>
             <li class="team-item">
               <img
-                src="./images/team/mikola.jpg"
+                class="team-img"
+                srcset="
+                  ./images/team/mikola-s.jpg    450w,
+                  ./images/team/mikola-s@2x.jpg 800w,
+                  ./images/team/mikola-m.jpg    354w,
+                  ./images/team/mikola-m@2x.jpg 708w,
+                  ./images/team/mikola-l.jpg    270w,
+                  ./images/team/mikola-l@2x.jpg 540w
+                "
+                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (max-width:767px) 450px, 100vw"
+                src="./images/team/mikola-s.jpg"
                 alt="Микола Тарасов"
-                width="270"
-                height="260"
               />
               <div class="member-desc">
                 <h3 class="team-member">Микола Тарасов</h3>
@@ -462,10 +618,18 @@
             </li>
             <li class="team-item">
               <img
-                src="./images/team/mihaylo.jpg"
+                class="team-img"
+                srcset="
+                  ./images/team/mihaylo-s.jpg    450w,
+                  ./images/team/mihaylo-s@2x.jpg 800w,
+                  ./images/team/mihaylo-m.jpg    354w,
+                  ./images/team/mihaylo-m@2x.jpg 708w,
+                  ./images/team/mihaylo-l.jpg    270w,
+                  ./images/team/mihaylo-l@2x.jpg 540w
+                "
+                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (max-width:767px) 450px, 100vw"
+                src="./images/team/mihaylo-s.jpg"
                 alt="Михайло Єрмаков"
-                width="270"
-                height="260"
               />
               <div class="member-desc">
                 <h3 class="team-member">Михайло Єрмаков</h3>
@@ -591,127 +755,130 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container aside">
-        <div class="navigation-group">
-          <!-- Footer navigation -->
-          <a class="link logo footer-logo" href="./index.html"
-            >Web<span class="logo-white">Studio</span></a
-          >
-
-          <!-- Footer contacts -->
-          <address class="footer-contacts">
-            <a
-              class="link map-link"
-              href="https://goo.gl/maps/1FD8mKBqTNXSPeUQA"
-              target="_blank"
-              >м. Київ, пр-т Лесі Українки, 26</a
+        <div class="footer-flex">
+          <div class="navigation-group">
+            <!-- Footer navigation -->
+            <a class="link logo footer-logo" href="./index.html"
+              >Web<span class="logo-white">Studio</span></a
             >
 
-            <a class="link contact-link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
+            <!-- Footer contacts -->
+            <address class="footer-contacts">
+              <a
+                class="link map-link"
+                href="https://goo.gl/maps/1FD8mKBqTNXSPeUQA"
+                target="_blank"
+                >м. Київ, пр-т Лесі Українки, 26</a
+              >
 
-            <a class="link contact-link" href="tel:+380961111111"
-              >+38 096 111 11 11</a
-            >
-          </address>
-        </div>
+              <a class="link contact-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
 
-        <!-- Footer socials -->
-        <div class="footer-socials-group">
-          <h3 class="footer-socials-title">приєднуйтесь</h3>
-          <ul class="socials list footer-socials-list">
-            <li class="social-item footer-social-item">
-              <a
-                class="social-link link footer-social-link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Icon Instagram"
+              <a class="link contact-link" href="tel:+380961111111"
+                >+38 096 111 11 11</a
               >
-                <svg
-                  class="social-icon footer-social-icon"
-                  width="20"
-                  height="20"
-                >
-                  <use href="./images/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-item footer-social-item">
-              <a
-                class="social-link link footer-social-link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Icon Twitter"
-              >
-                <svg
-                  class="social-icon footer-social-icon"
-                  width="20"
-                  height="20"
-                >
-                  <use href="./images/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-item footer-social-item">
-              <a
-                class="social-link link footer-social-link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Icon Facebook"
-              >
-                <svg
-                  class="social-icon footer-social-icon"
-                  width="20"
-                  height="20"
-                >
-                  <use href="./images/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-item footer-social-item">
-              <a
-                class="social-link link footer-social-link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Icon Linkedin"
-              >
-                <svg
-                  class="social-icon footer-social-icon"
-                  width="20"
-                  height="20"
-                >
-                  <use href="./images/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+            </address>
+          </div>
 
-        <!-- Footer form -->
-        <div class="footer-form-container">
-          <strong class="footer-form-title">Підпишіться на розсилку</strong>
-          <form class="footer-form">
-            <input
-              class="footer-form-input"
-              type="email"
-              name="user-mail"
-              placeholder="E-mail"
-            />
-            <button class="footer-form-button hero-button" type="submit">
-              Підписатися
-              <svg class="footer-form-icon" width="24" height="24">
-                <use href="./images/sprite-form.svg#icon-send"></use>
-              </svg>
-            </button>
-          </form>
+          <!-- Footer socials -->
+          <div class="footer-socials-group">
+            <h3 class="footer-socials-title">приєднуйтесь</h3>
+            <ul class="socials list footer-socials-list">
+              <li class="social-item footer-social-item">
+                <a
+                  class="social-link link footer-social-link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Icon Instagram"
+                >
+                  <svg
+                    class="social-icon footer-social-icon"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item footer-social-item">
+                <a
+                  class="social-link link footer-social-link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Icon Twitter"
+                >
+                  <svg
+                    class="social-icon footer-social-icon"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item footer-social-item">
+                <a
+                  class="social-link link footer-social-link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Icon Facebook"
+                >
+                  <svg
+                    class="social-icon footer-social-icon"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item footer-social-item">
+                <a
+                  class="social-link link footer-social-link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Icon Linkedin"
+                >
+                  <svg
+                    class="social-icon footer-social-icon"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Footer form -->
+          <div class="footer-form-container">
+            <strong class="footer-form-title">Підпишіться на розсилку</strong>
+            <form class="footer-form">
+              <input
+                class="footer-form-input"
+                type="email"
+                name="user-mail"
+                placeholder="E-mail"
+              />
+              <button class="footer-form-button hero-button" type="submit">
+                Підписатися
+                <svg class="footer-form-icon" width="24" height="24">
+                  <use href="./images/sprite-form.svg#icon-send"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
 
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

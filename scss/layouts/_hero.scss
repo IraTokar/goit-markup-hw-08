@@ -1,31 +1,64 @@
 .hero {
     background-color: var(--background-color-dark);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(../images/hero/hero.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(../images/hero/hero-s.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     max-width: 1600px;
+    background-size: cover;
 
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
 
     margin-left: auto;
     margin-right: auto;
+
+    @include mq(retina) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(../images/hero/hero-s@2x.jpg);
+    }
+
+    
+    @include mq(tablet-only) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(../images/hero/hero-m.jpg);
+
+         @include mq(retina) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(../images/hero/hero-m@2x.jpg);
+        }
+    }
+
+    @include mq(desktop) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(../images/hero/hero-l.jpg);
+        padding-top: 200px;
+        padding-bottom: 200px;
+
+         @include mq(retina) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(../images/hero/hero-l@2x.jpg);
+        }
+    }
+
 
 }
 
 .hero-title {
     color: var(--secondary-text-color);
-    font-size: 44px;
+    font-size: 26px;
     font-weight: 900;
-    line-height: 1.36;
-    letter-spacing: 2.64px;
+    line-height: 1.62;
+    letter-spacing: 1.56px;
     text-transform: uppercase;
 
-    width: 696px;
+    width: 360px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 30px;
+
+    @include mq(desktop) {
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 2.64px;
+
+        width: 696px;
+    }
 }
 
 .hero-button {
