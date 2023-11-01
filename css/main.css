@@ -117,6 +117,8 @@ img {
   border: none;
   margin-left: auto;
   cursor: pointer;
+  -webkit-transition: fill var(--animation);
+  transition: fill var(--animation);
 }
 @media screen and (min-width: 768px) {
   .menu-button {
@@ -152,6 +154,7 @@ img {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   padding: 10px 15px 48px 40px;
+  z-index: 100;
 }
 @media screen and (min-width: 768px) {
   .menu-container {
@@ -179,6 +182,8 @@ img {
   font-weight: 500;
   line-height: normal;
   letter-spacing: 0.8px;
+  -webkit-transition: color var(--animation);
+  transition: color var(--animation);
 }
 .menu-nav-link:last-child {
   margin-bottom: 0;
@@ -607,8 +612,14 @@ img {
 }
 
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .portfolio-buttons {
@@ -621,14 +632,19 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
   margin-bottom: 50px;
+  gap: 8px;
 }
-
-.portfolio-button {
-  margin-right: 8px;
-}
-.portfolio-button:last-child {
-  margin-right: 0;
+@media screen and (max-width: 767.98px) {
+  .portfolio-buttons {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .button {
@@ -1528,6 +1544,12 @@ img {
   transition: color var(--animation);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .project-name-wrap {
+    width: 304px;
+  }
+}
+
 .progect-type {
   color: var(--description-text-color);
   font-size: 16px;
@@ -1543,14 +1565,20 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+  gap: 30px;
 }
 
-.project-item {
-  /* flex-basis: calc(100% / 3 -30px); */
-  margin-top: 30px;
-  margin-left: 30px;
+@media screen and (min-width: 768px) {
+  .project-item {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project-item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .project-link {
@@ -1604,4 +1632,10 @@ img {
   border-left: 1px solid #EEE;
   border-right: 1px solid #EEE;
   border-bottom: 1px solid #EEE;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .project-desc-pad {
+    padding-bottom: 56px;
+  }
 }/*# sourceMappingURL=main.css.map */

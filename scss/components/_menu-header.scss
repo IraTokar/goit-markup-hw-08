@@ -7,6 +7,8 @@
     margin-left: auto;
     cursor: pointer;
 
+    transition: fill var(--animation);
+
 
     @include mq(tablet) {
        display: none;
@@ -41,6 +43,8 @@
 
     padding: 10px 15px 48px 40px;
 
+    z-index: 100;
+
     @include mq(tablet) {
        display: none;
     }
@@ -55,7 +59,7 @@
 }
 
 .menu-nav-item {
-    margin-bottom: 36px;
+    margin-bottom: 36px; 
 }
 
 .menu-nav-link {
@@ -64,6 +68,8 @@
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.8px;
+
+    transition: color var(--animation);
 
     &:last-child {
         margin-bottom: 0;
