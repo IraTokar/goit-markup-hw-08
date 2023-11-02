@@ -59,6 +59,13 @@
 
         width: 696px;
     }
+
+    @include mq(min-only) {
+        letter-spacing: 1.5px;
+        font-size: 15px;
+
+        width: 180px;
+    }
 }
 
 .hero-button {

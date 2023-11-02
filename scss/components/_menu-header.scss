@@ -99,6 +99,10 @@
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.68px;
+
+    @include mq(min-only) {
+        font-size: 24px;
+    }
 }
 
 .menu-contacts-mail {
@@ -107,11 +111,20 @@
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.48px;
+
+    @include mq(min-only) {
+        font-size: 18px;
+    }
 }
 
 .menu-socials {
     display: flex;
     position: relative;
+
+    @include mq(min-only) {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 }
 
 .menu-social-item {

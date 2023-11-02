@@ -216,6 +216,11 @@ img {
   line-height: normal;
   letter-spacing: 0.68px;
 }
+@media screen and (max-width: 479.98px) {
+  .menu-contacts-tel {
+    font-size: 24px;
+  }
+}
 
 .menu-contacts-mail {
   color: var(--description-text-color);
@@ -224,12 +229,24 @@ img {
   line-height: normal;
   letter-spacing: 0.48px;
 }
+@media screen and (max-width: 479.98px) {
+  .menu-contacts-mail {
+    font-size: 18px;
+  }
+}
 
 .menu-socials {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
+}
+@media screen and (max-width: 479.98px) {
+  .menu-socials {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 
 .menu-social-item {
@@ -955,6 +972,13 @@ img {
     line-height: 1.36;
     letter-spacing: 2.64px;
     width: 696px;
+  }
+}
+@media screen and (max-width: 479.98px) {
+  .hero-title {
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    width: 180px;
   }
 }
 
