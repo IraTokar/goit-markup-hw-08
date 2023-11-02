@@ -52,6 +52,10 @@
         margin-right: 12px;
         margin-bottom: 0px;
     }
+
+    @include mq(min-only) {
+        width: 290px;
+    }
 }
 
 

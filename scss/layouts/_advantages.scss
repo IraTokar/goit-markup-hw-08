@@ -1,4 +1,10 @@
 .advantages {
+
+    @include mq(min-only) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
     @include mq(mobile) {
         padding-top: 48px;
         padding-bottom: 48px;
@@ -33,8 +39,9 @@
 }
 
 .advantage__item {
+
     @include mq(mobile-only) {
-        margin-top: 30px;
+        margin-bottom: 30px;
         width: 450px;
         
         &:last-child {
@@ -50,6 +57,14 @@
         flex-basis: calc((100% - 3*30px)/4);
     }
 
+    @include mq(min-only) {
+        margin-bottom: 20px;
+        width: 290px;
+            
+        &:last-child {
+            margin-top: 0px;
+        }
+    }
 }
 
 .advantages__icons {
@@ -75,6 +90,7 @@
     @include mq(desktop) {
         width: 270px;
     }
+
 }
 
 .advantage__title {
@@ -86,7 +102,7 @@
 
     margin-bottom: 10px;
 
-    @include mq(mobile) {
+    @include mq(mobile-only) {
         text-align: center;
     }
 }

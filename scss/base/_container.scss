@@ -5,6 +5,10 @@
     margin-left: auto;
     margin-right: auto;
 
+    @include mq(min-only) {
+        width: 320px;
+    }
+
     @include mq(mobile) {
         width: 480px;
     }

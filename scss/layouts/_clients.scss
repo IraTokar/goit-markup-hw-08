@@ -14,6 +14,10 @@
         padding-bottom: 94px;
     }
 
+    @include mq(min-only) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 }
 
 .clients__title {
@@ -51,6 +55,10 @@
     align-items: center;
     gap: 30px;
     flex-wrap: wrap;
+
+    @include mq(min-only) {
+        flex-direction: column;
+    }
 
 }
 

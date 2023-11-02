@@ -48,6 +48,11 @@
         align-items: center;
     }
 
+    @include mq(min-only) {
+        display: flex;
+        flex-direction: column;
+    }
+
 }
 
 .team-item {
@@ -68,6 +73,12 @@
     @include mq(desktop) {
         flex-basis: calc((100% - 3*30px)/4);
 
+    }
+
+    @include mq(min-only) {
+        margin-bottom: 20px;
+        width: 290px;
+            
     }
 }
 

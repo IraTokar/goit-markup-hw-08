@@ -44,7 +44,9 @@
 }
 
 .project-link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     transition: box-shadow var(--animation);
 
@@ -91,15 +93,13 @@
 .project-desc {
     padding: 20px 24px;
 
+    flex-grow: 1;
+
     border-left: 1px solid #EEE;
     border-right: 1px solid #EEE;
     border-bottom: 1px solid #EEE;
 
 }
 
-.project-desc-pad {
-    @include mq(tablet-only) {
-        padding-bottom: 56px;
-    }
-}
+
 
