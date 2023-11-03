@@ -7,8 +7,6 @@
     margin-left: auto;
     cursor: pointer;
 
-    transition: fill var(--animation);
-
 
     @include mq(tablet) {
        display: none;
@@ -17,6 +15,10 @@
     @include mq(desktop) {
         display: none;
     }
+}
+
+.menu-icons {
+    transition: fill var(--animation);
 }
 
 .menu-button:hover .menu-icons,
@@ -132,6 +134,10 @@
 
     &:not(:last-child) {
         margin-right: 20px;
+
+        @include mq(min-only) {
+            margin-right: 10px;
+        }  
     }
 
     &:not(:last-child)::after {
@@ -143,7 +149,7 @@
         width: 1px;
         height: 22px;
         background-color: rgba(33, 33, 33, 0.20);
-        }
+    }  
 }
 
 .menu-social-link {
@@ -152,6 +158,10 @@
     font-weight: 500;
     line-height: 1.22%;
     letter-spacing: 0.36px;
+
+    @include mq(min-only) {
+        font-size: 11px;
+    }
 
    
 }

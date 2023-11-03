@@ -16,6 +16,10 @@
         transform: translate(-50%, -50%) scale(0.8);
     }
 
+    @include mq(min-only) {
+        width: 290px;
+    }
+
     @include mq(desktop) {
         width: 528px;
     }
@@ -63,6 +67,11 @@
 
     display: block;
     margin-bottom: 12px;
+
+    @include mq(min-only) {
+        font-size: 16px;
+    }
+
 }
 
 .form-group,
@@ -140,7 +149,7 @@
     &:hover,
     &:focus {
          border: 1px solid var(--accent-color);
-  }
+    }
 
     &::placeholder {
         color: rgba(117, 117, 117, 0.50);
@@ -148,7 +157,11 @@
         font-weight: 400;
         line-height: normal;
         letter-spacing: 0.12px;
-}
+    }
+
+    @include mq(min-only) {
+        height: 90px;
+    }
 }
 
 
@@ -159,6 +172,11 @@
 
     margin-top: 15px;
     margin-bottom: 30px;
+
+    @include mq(min-only) {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
 }
 
 .custom-checkbox {
@@ -186,6 +204,14 @@
         background-color: var(--accent-color);
         outline-color: var(--accent-color);
     }
+
+    @include mq(min-only) {
+        width: 12px;
+        height: 12px;
+
+        margin-right: 6px;
+    }
+
 }
 
 .custom-checkbox-icon {
@@ -198,6 +224,7 @@
 
         fill: #EEE;
     }
+
 }
 
 .policy-description {
@@ -206,6 +233,12 @@
     font-weight: 400;
     line-height: 1.71;
     letter-spacing: 0.36px;
+
+    @include mq(min-only) {
+        font-size: 11px;
+        letter-spacing: 0.42px;
+        line-height: 1.4px;
+    }
 
     @include mq(desktop) {
         font-size: 14px;
@@ -222,6 +255,11 @@
 
     transition: border-bottom var(--animation);
 
+    @include mq(min-only) {
+        font-size: 11px;
+        letter-spacing: 0.42px
+    }
+
     @include mq(desktop) {
         font-size: 14px;
         letter-spacing: 0.42px;
@@ -230,6 +268,10 @@
 
 .form-button {
     padding: 10px 52px;
+
+    @include mq(min-only) {
+        padding: 8px 46px;
+    }
 }
 
 .form-button {

@@ -122,8 +122,6 @@ img {
   border: none;
   margin-left: auto;
   cursor: pointer;
-  -webkit-transition: fill var(--animation);
-  transition: fill var(--animation);
 }
 @media screen and (min-width: 768px) {
   .menu-button {
@@ -134,6 +132,11 @@ img {
   .menu-button {
     display: none;
   }
+}
+
+.menu-icons {
+  -webkit-transition: fill var(--animation);
+  transition: fill var(--animation);
 }
 
 .menu-button:hover .menu-icons,
@@ -255,6 +258,11 @@ img {
 .menu-social-item:not(:last-child) {
   margin-right: 20px;
 }
+@media screen and (max-width: 479.98px) {
+  .menu-social-item:not(:last-child) {
+    margin-right: 10px;
+  }
+}
 .menu-social-item:not(:last-child)::after {
   position: absolute;
   top: -2px;
@@ -272,6 +280,11 @@ img {
   font-weight: 500;
   line-height: 1.22%;
   letter-spacing: 0.36px;
+}
+@media screen and (max-width: 479.98px) {
+  .menu-social-link {
+    font-size: 11px;
+  }
 }
 
 .backdrop {
@@ -314,6 +327,11 @@ img {
 .backdrop.is-hidden .modal-wrapper {
   -webkit-transform: translate(-50%, -50%) scale(0.8);
           transform: translate(-50%, -50%) scale(0.8);
+}
+@media screen and (max-width: 479.98px) {
+  .modal-wrapper {
+    width: 290px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal-wrapper {
@@ -360,6 +378,11 @@ img {
   letter-spacing: 0.6px;
   display: block;
   margin-bottom: 12px;
+}
+@media screen and (max-width: 479.98px) {
+  .modal-wrapper-title {
+    font-size: 16px;
+  }
 }
 
 .form-group,
@@ -460,6 +483,11 @@ img {
   line-height: normal;
   letter-spacing: 0.12px;
 }
+@media screen and (max-width: 479.98px) {
+  .form-textarea {
+    height: 90px;
+  }
+}
 
 .form-policy-group {
   display: -webkit-box;
@@ -473,6 +501,12 @@ img {
           justify-content: center;
   margin-top: 15px;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 479.98px) {
+  .form-policy-group {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
 }
 
 .custom-checkbox {
@@ -502,6 +536,13 @@ img {
   background-color: var(--accent-color);
   outline-color: var(--accent-color);
 }
+@media screen and (max-width: 479.98px) {
+  .custom-checkbox {
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+  }
+}
 
 .custom-checkbox-icon {
   opacity: 0;
@@ -520,6 +561,13 @@ img {
   line-height: 1.71;
   letter-spacing: 0.36px;
 }
+@media screen and (max-width: 479.98px) {
+  .policy-description {
+    font-size: 11px;
+    letter-spacing: 0.42px;
+    line-height: 1.4px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .policy-description {
     font-size: 14px;
@@ -536,6 +584,12 @@ img {
   -webkit-transition: border-bottom var(--animation);
   transition: border-bottom var(--animation);
 }
+@media screen and (max-width: 479.98px) {
+  .policy-link {
+    font-size: 11px;
+    letter-spacing: 0.42px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .policy-link {
     font-size: 14px;
@@ -545,6 +599,11 @@ img {
 
 .form-button {
   padding: 10px 52px;
+}
+@media screen and (max-width: 479.98px) {
+  .form-button {
+    padding: 8px 46px;
+  }
 }
 
 .form-button {
